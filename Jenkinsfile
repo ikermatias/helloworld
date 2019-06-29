@@ -6,6 +6,8 @@ node {
    
    stage 'Set registry'
 	sh 'npm config set registry http://registry.npmjs.org/' 
+   stage 'Clean cache'
+	sh 'npm cache clean -f'   
 
    stage 'Setup'
 	sh 'npm install'
